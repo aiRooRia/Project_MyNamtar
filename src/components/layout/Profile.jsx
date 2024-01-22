@@ -4,7 +4,7 @@ export const Profile = () => {
       <div className="flex flex-col  gap-20 w-[70%]  pr-20 max-md:w-full max-md:gap-[20px] max-md:pr-0">
         <div className="max-md:w-full">
           <h1 className="text-6xl font-bold mb-3 max-md:text-3xl">
-            Hi, I`m Itachi Uchiha
+            Hi, I`m Itachi 
           </h1>
           <p className="text-gray-600">
             I'm a full stack NINJA (React.js & Node.js) with a focus on creating

@@ -1,9 +1,14 @@
 import { Button } from "../ui/Button";
-export const About = () => {
+export const About = ({ refProp }) => {
   return (
-    <div className="flex flex-col items-center bg-gray-50 gap-10   py-[96px] px-[80px] max-w-[1440px] max-md:px-[16px]  max-md:w-full max-lg:px-[16px]">
+    <div
+      ref={refProp}
+      className="flex flex-col items-center bg-gray-50 gap-10   py-[96px] px-[80px] max-w-[1440px] max-md:px-[16px]  max-md:w-full max-lg:px-[16px]"
+    >
       <div>
-        <Button />
+        <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600">
+          About us
+        </button>
       </div>
       <div className="flex max-md:flex-col gap-4">
         <div className="w-[40%] max-md:w-full">

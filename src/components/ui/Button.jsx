@@ -8,11 +8,10 @@ export const Button = () => {
       GetInTouch: "Get in touch",
     },
   ];
+  const data = ["About us", "Work "];
   return (
     <>
-      {buttons.map((el) => (
-        <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600">About</button>
-      ))}
+      <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600"></button>
     </>
   );
 };

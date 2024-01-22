@@ -6,63 +6,63 @@ export const Cards = () => {
     },
     {
       img: "icon-tailwindcss.svg",
-      text: "Typescript",
+      text: "Tailwindcss",
     },
     {
       img: "icon-storybook.svg",
-      text: "Typescript",
+      text: "Storybook",
     },
     {
       img: "icon-socket.svg",
-      text: "Typescript",
+      text: "Socket",
     },
     {
       img: "icon-sass.svg",
-      text: "Typescript",
+      text: "Sass",
     },
     {
       img: "icon-react.svg",
-      text: "Typescript",
+      text: "React",
     },
     {
       img: "icon-postgresql.svg",
-      text: "Typescript",
+      text: "Postgresql",
     },
     {
       img: "icon-nodejs.svg",
-      text: "Typescript",
+      text: "Nodejs",
     },
     {
       img: "icon-nextjs.svg",
-      text: "Typescript",
+      text: "Nextjs",
     },
     {
       img: "icon-nest.svg",
-      text: "Typescript",
+      text: "Nest",
     },
-    {
-      img: "icon-mongodb.svg",
-      text: "Typescript",
-    },
+    // {
+    //   img: "icon-mongodb.svg",
+    //   text: "MongoDB",
+    // },
     {
       img: "icon-javscript.svg",
-      text: "Typescript",
+      text: "Javascript",
     },
     {
       img: "icon-git.svg",
-      text: "Typescript",
+      text: "Git",
     },
     {
       img: "icon-figma.svg",
-      text: "Typescript",
+      text: "Figma",
     },
     {
       img: "icon-express.svg",
-      text: "Typescript",
+      text: "Express",
     },
     {
       img: "icon-cypress.svg",
-      text: "Typescript",
+      text: "Cypress",
     },
   ];
   return (

@@ -32,9 +32,6 @@ export const WorkContainer = () => {
 export const WorkContainerReverse = () => {
   return (
     <div className="flex  rounded-xl shadow-xl text-gray-600 max-md:flex-col">
-      <div className="p-20 w-[50%]  bg-gray-50 max-md:p-[32px] max-md:w-full  max-md:flex max-md:justify-center">
-        <img src="Picture.png" alt="" />
-      </div>
       <div className="flex flex-col gap-10 p-20 w-[50%] max-md:w-full max-md:p-[32px] max-lg:px-[16px]  ">
         <h1>Fiskil</h1>
         <p>
@@ -55,6 +52,9 @@ export const WorkContainerReverse = () => {
           <Button />
         </div>
         <img src="icon-edit.svg" width={30} alt="" />
+      </div>
+      <div className="p-20 w-[50%]  bg-gray-50 max-md:p-[32px] max-md:w-full  max-md:flex max-md:justify-center">
+        <img src="Picture.png" alt="" />
       </div>
     </div>
   );
