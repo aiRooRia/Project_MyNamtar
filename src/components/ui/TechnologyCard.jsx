@@ -52,10 +52,10 @@ export const Cards = () => {
       img: "icon-git.svg",
       text: "Git",
     },
-    {
-      img: "icon-figma.svg",
-      text: "Figma",
-    },
+    // {
+    //   img: "icon-figma.svg",
+    //   text: "Figma",
+    // },
     {
       img: "icon-express.svg",
       text: "Express",

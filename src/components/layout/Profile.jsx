@@ -3,9 +3,11 @@ export const Profile = () => {
     <div className="flex max-w-[1440px] max-md:w-full py-[96px] px-[80px] max-md:flex-col max-md:px-[16px] max-md:py-[64px] max-lg:px-[16px]">
       <div className="flex flex-col  gap-20 w-[70%]  pr-20 max-md:w-full max-md:gap-[20px] max-md:pr-0">
         <div className="max-md:w-full">
-          <h1 className="text-6xl font-bold mb-3 max-md:text-3xl">
-            Hi, I`m Itachi 
+          <h1 className="text-6xl font-bold mb-3 max-md:text-3xl flex gap-5">
+            Hi, I`m Itachi
+            <img className="w-14 max-md:w-10" src="sharingan.png" alt="" />
           </h1>
+
           <p className="text-gray-600">
             I'm a full stack NINJA (React.js & Node.js) with a focus on creating
             (and occasionally designing) exceptional digital experiences that
@@ -30,8 +32,14 @@ export const Profile = () => {
           <img src="bee.svg" alt="" />
         </div>
       </div>
-      <div className="w-[30%] border-2 border-grey max-md:w-full  max-md:flex max-md:justify-center">
-        <img src="itachi.jpg" width={600} alt="" />
+      <div className="w-[30%]  border-grey max-md:w-full  max-md:flex max-md:justify-center ">
+        <img
+          className=" border-[15px] border-white z-20"
+          src="itachi.jpg"
+          width={350}
+          alt=""
+        />
+        {/* <div className="bg-gray-200 w-[370px] h-[300px] relative z-10 m-7"></div> */}
       </div>
     </div>
   );

@@ -8,21 +8,35 @@ import {
   GetInTouch,
   Footer,
 } from "@/components/layout/Index";
-import { serverHooks } from "next/dist/server/app-render/entry-base";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 const Home = () => {
-  const sharedRef = useRef(null);
+  const aboutRef = useRef(null);
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
+  const aboutHandleClick = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const workHandleClick = () => {
+    workRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const contactHandleClick = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <div className="flex flex-col items-center ">
-      <Header refProp={sharedRef} />
+    <div className="flex flex-col items-center sm:max-w-[1440px] sm:py-[96px] sm:px-[80px]">
+      <Header
+        aboutHandleClick={aboutHandleClick}
+        workHandleClick={workHandleClick}
+        contactHandleClick={contactHandleClick}
+      />
       <Profile />
-      <About refProp={sharedRef} />
+      <About aboutRef={aboutRef} />
       <Skill />
       <Experience />
-      <Work refProp={sharedRef} />
+      <Work workRef={workRef} />
       <GetInTouch />
-      <Footer />
+      <Footer contactRef={contactRef} />
     </div>
   );
 };

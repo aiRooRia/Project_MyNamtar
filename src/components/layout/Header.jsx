@@ -1,7 +1,11 @@
 import React from "react";
-import { useRef } from "react";
+
 import useDownloader from "react-use-downloader";
-export const Header = ({ refProp }) => {
+export const Header = ({
+  aboutHandleClick,
+  workHandleClick,
+  contactHandleClick,
+}) => {
   const { download } = useDownloader();
   const handleDownload = () => {
     const fileUrl =
@@ -9,27 +13,23 @@ export const Header = ({ refProp }) => {
     const filename = "beautiful-carpathia.jpg";
     download(fileUrl, filename);
   };
-  const ref = useRef(null);
-  const handleClick = () => {
-    refProp.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
-    <div className="flex justify-between max-w-[1440px] max-md:w-full py-[96px] px-[80px] max-md:p-[16px] max-lg:px-[16px]">
-      <div>
+    <div className="flex justify-between items-center sm:max-w-[1440px] sm:min-w-full sm:py-[96px] sm:px-[80px] p-[16px] px-[16px]  ">
+      <div className="">
         <h1 className="font-bold text-3xl">aiRo!</h1>
       </div>
-      <div className="flex items-center gap-5 max-md:hidden">
+      <div className="flex items-center gap-5 max-md:hidden ">
         <ul className="flex justify-between items-center gap-5">
           <li>
-            <button onClick={handleClick}>About</button>
+            <button onClick={aboutHandleClick}>About</button>
           </li>
           <li>
-            <button onClick={handleClick}>Work</button>
+            <button onClick={workHandleClick}>Work</button>
           </li>
           <li>Testimonials</li>
           <li>
-            <button onClick={handleClick}>Contact</button>
+            <button onClick={contactHandleClick}>Contact</button>
           </li>
         </ul>
         <img src="light.svg" alt="" width={30} />
@@ -39,6 +39,9 @@ export const Header = ({ refProp }) => {
         >
           Download CV
         </button>
+      </div>
+      <div className="hidden max-md:flex">
+        <img src="icon-more.svg" alt="" />
       </div>
     </div>
   );

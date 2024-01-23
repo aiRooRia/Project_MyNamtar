@@ -1,8 +1,9 @@
 import { Button } from "../ui/Button";
-export const About = ({ refProp }) => {
+
+export const About = ({ aboutRef }) => {
   return (
     <div
-      ref={refProp}
+      ref={aboutRef}
       className="flex flex-col items-center bg-gray-50 gap-10   py-[96px] px-[80px] max-w-[1440px] max-md:px-[16px]  max-md:w-full max-lg:px-[16px]"
     >
       <div>
