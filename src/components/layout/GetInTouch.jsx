@@ -13,7 +13,7 @@ export const GetInTouch = () => {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <div className="flex gap-3">
+        <div className="flex items-center gap-3">
           <img src="icon-email.svg" alt="" />
           <p className="text-3xl font-bold mb-3 text-black max-md:text-base">
             ariguun10@gmail.com

@@ -34,7 +34,7 @@ export const Profile = () => {
       </div>
       <div className="w-[30%]  border-grey max-md:w-full  max-md:flex max-md:justify-center ">
         <img
-          className=" border-[15px] border-white z-20"
+          className=" border-[15px] border-white "
           src="itachi.jpg"
           width={350}
           alt=""

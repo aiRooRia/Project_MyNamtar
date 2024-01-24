@@ -1,11 +1,15 @@
-import React from "react";
-
+import { useState } from "react";
 import useDownloader from "react-use-downloader";
+
 export const Header = ({
   aboutHandleClick,
   workHandleClick,
   contactHandleClick,
 }) => {
+  const [showMenu, setShowMEnu] = useState(false);
+  const toggleMenu = () => {
+    setShowMEnu(!showMenu);
+  };
   const { download } = useDownloader();
   const handleDownload = () => {
     const fileUrl =
@@ -15,7 +19,7 @@ export const Header = ({
   };
 
   return (
-    <div className="flex justify-between items-center sm:max-w-[1440px] sm:min-w-full sm:py-[96px] sm:px-[80px] p-[16px] px-[16px]  ">
+    <div className="flex justify-between items-center sm:max-w-[1440px] sm:min-w-full lg:py-[96px] lg:px-[80px] py-[16px] px-[16px]  ">
       <div className="">
         <h1 className="font-bold text-3xl">aiRo!</h1>
       </div>
@@ -41,8 +45,40 @@ export const Header = ({
         </button>
       </div>
       <div className="hidden max-md:flex">
-        <img src="icon-more.svg" alt="" />
+        <img onClick={toggleMenu} src="icon-more.svg" alt="" />
       </div>
+      <div
+        onClick={toggleMenu}
+        className="absolute top-0 left-0 w-screen h-full bg-black bg-opacity-70 flex justify-end"
+      ></div>
+      {showMenu && (
+        <div className="bg-white w-[70%] h-full absolute top-0 right-0 ">
+          <div className="flex justify-between py-2 px-2 border-b-2">
+            <h1 className="font-bold text-xl">aiRo!</h1>
+            <button
+              onClick={toggleMenu}
+              className="p-1 border-solid border-2 border-black rounded-full  "
+            >
+              X
+            </button>
+          </div>
+          <div className="text-gray-600 py-2 px-2 border-b-2">
+            <p>About</p>
+            <p>Work</p>
+            <p>Testi</p>
+            <p>Contact</p>
+          </div>
+          <div className="py-2 px-2 flex justify-between text-gray-600">
+            <p>Switch Theme</p>
+            <img src="light.svg" width={30} alt="" />
+          </div>
+          <div className="py-2 px-2 ">
+            <button className="w-full rounded-xl bg-black py-[3px] px-[20px] text-white">
+              Download CV
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
