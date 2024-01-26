@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useDownloader from "react-use-downloader";
 
 export const Header = ({
@@ -17,6 +17,16 @@ export const Header = ({
     const filename = "beautiful-carpathia.jpg";
     download(fileUrl, filename);
   };
+  const [isDarkMode, setDarkMode] = useState(false);
+  useEffect(() => {
+    const isDark = localStorage.getItem("darkMode") === "true";
+    setDarkMode(isDark);
+  }, []);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode);
+    localStorage.setItem("hello", "leap");
+  }, [isDarkMode]);
 
   return (
     <div className="flex justify-between items-center sm:max-w-[1440px] sm:min-w-full lg:py-[96px] lg:px-[80px] py-[16px] px-[16px]  ">
@@ -36,15 +46,20 @@ export const Header = ({
             <button onClick={contactHandleClick}>Contact</button>
           </li>
         </ul>
-        <img src="light.svg" alt="" width={30} />
+        <img
+          onClick={() => setDarkMode((prevState) => !prevState)}
+          src={isDarkMode ? "moon.svg" : "light.svg"}
+          alt=""
+          width={30}
+        />
         <button
           onClick={handleDownload}
-          className="py-1.5 px-4 bg-black rounded-lg text-white"
+          className="py-1.5 px-4 bg-black rounded-lg text-white dark:bg-gray-100 dark:text-black"
         >
           Download CV
         </button>
       </div>
-      <div className="hidden max-md:flex">
+      {/* <div className="hidden max-md:flex">
         <img onClick={toggleMenu} src="icon-more.svg" alt="" />
       </div>
       <div
@@ -78,7 +93,7 @@ export const Header = ({
             </button>
           </div>
         </div>
-      )}
+      )}{" "} */}
     </div>
   );
 };

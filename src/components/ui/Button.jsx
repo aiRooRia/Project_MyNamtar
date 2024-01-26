@@ -11,7 +11,7 @@ export const Button = () => {
   const data = ["About us", "Work "];
   return (
     <>
-      <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600"></button>
+      <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600 dark:bg-gray-900"></button>
     </>
   );
 };

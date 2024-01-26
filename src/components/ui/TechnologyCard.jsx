@@ -70,7 +70,7 @@ export const Cards = () => {
       {cards.map((el) => (
         <div className="flex flex-col items-center justify-between ">
           <img src={el.img} alt="" width={120} className="max-md:w-[60px] " />
-          <p className="text-gray-600">{el.text}</p>
+          <p className="text-gray-600 dark:text-white">{el.text}</p>
         </div>
       ))}
     </>

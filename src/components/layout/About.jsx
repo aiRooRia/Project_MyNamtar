@@ -4,22 +4,22 @@ export const About = ({ aboutRef }) => {
   return (
     <div
       ref={aboutRef}
-      className="flex flex-col items-center bg-gray-50 gap-10   py-[96px] px-[80px] max-w-[1440px] max-md:px-[16px]  max-md:w-full max-lg:px-[16px]"
+      className="flex flex-col items-center bg-gray-50 gap-10   py-[96px] px-[80px] max-w-[1440px] max-md:px-[16px]  max-md:w-full max-lg:px-[16px] dark:bg-gray-900 "
     >
       <div>
-        <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600">
+        <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] dark:text-white text-gray-900 dark:bg-gray-700">
           About us
         </button>
       </div>
       <div className="flex max-md:flex-col gap-4">
-        <div className="w-[40%] max-md:w-full">
+        <div className="w-[40%] max-md:w-full ">
           <img src="akatsuki.jpg" alt="" width={1000} />
         </div>
         <div className="w-[60%] pl-20 flex flex-col gap-7 max-md:w-full max-md:pl-0">
           <h3 className="text-3xl font-bold mb-3 max-md:text-xl ">
             Curious about our crew Akatsuki? Here you have it:
           </h3>
-          <div className="flex flex-col gap-4 text-gray-600">
+          <div className="flex flex-col gap-4 text-gray-600  dark:text-white">
             <p>
               I'm a passionate, self-proclaimed designer who specializes in full
               stack development (React.js & Node.js). I am very enthusiastic

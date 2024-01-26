@@ -4,11 +4,11 @@ export const Skill = () => {
   return (
     <div className="flex flex-col items-center gap-10  py-[96px] px-[80px] max-w-[1440px] max-md:px-[16px]  max-md:w-full">
       <div className="flex flex-col items-center gap-5">
-        <button className="rounded-xl bg-gray-200 py-[3px] px-[20px] text-gray-600">
+        <button className="rounded-xl bg-gray-200 dark:bg-gray-700 py-[3px] px-[20px] dark:text-gray-200 text-gray-600 ">
           Skills
         </button>
 
-        <p className="text-gray-600 max-md:text-center">
+        <p className="text-gray-600 max-md:text-center  dark:text-white">
           The skills, tools and technologies I am really good at:
         </p>
       </div>

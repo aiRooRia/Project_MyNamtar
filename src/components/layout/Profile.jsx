@@ -8,7 +8,7 @@ export const Profile = () => {
             <img className="w-14 max-md:w-10" src="sharingan.png" alt="" />
           </h1>
 
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-white">
             I'm a full stack NINJA (React.js & Node.js) with a focus on creating
             (and occasionally designing) exceptional digital experiences that
             are fast, accessible, visually appealing, and responsive. Even
@@ -19,11 +19,11 @@ export const Profile = () => {
         <div className="flex flex-col gap-2 ">
           <div className="flex gap-2">
             <img src="location.svg" alt="" />
-            <p className="text-gray-600">Utaanbaatar, Mongolia</p>
+            <p className="text-gray-600 dark:text-white">Utaanbaatar, Mongolia</p>
           </div>
           <div className="flex gap-2">
             <img src="dot.png" alt="" />
-            <p className="text-gray-600">Available for new task</p>
+            <p className="text-gray-600 dark:text-white">Available for new task</p>
           </div>
         </div>
         <div className="flex gap-3 ">

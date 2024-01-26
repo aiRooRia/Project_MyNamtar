@@ -24,7 +24,7 @@ const Home = () => {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="flex flex-col  sm:max-w-[1440px] sm:py-[96px] sm:px-[80px]">
+    <div className="flex flex-col items-center sm:max-w-[1440px] sm:py-[96px] sm:px-[80px]">
       <Header
         aboutHandleClick={aboutHandleClick}
         workHandleClick={workHandleClick}
